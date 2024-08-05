@@ -1,0 +1,215 @@
+100000000: 
+329240959 nanoseconds
+213083667 nanoseconds
+
+130000000: 
+426825583 nanoseconds
+277564167 nanoseconds
+
+160000000: 
+525185875 nanoseconds
+341135791 nanoseconds
+
+190000000: 
+625318500 nanoseconds
+405722708 nanoseconds
+
+220000000: 
+723763209 nanoseconds
+469399125 nanoseconds
+
+250000000: 
+822375959 nanoseconds
+533841708 nanoseconds
+
+280000000: 
+920953708 nanoseconds
+598499667 nanoseconds
+
+310000000: 
+1027164084 nanoseconds
+672924708 nanoseconds
+
+340000000: 
+1118364500 nanoseconds
+727158792 nanoseconds
+
+370000000: 
+1220648459 nanoseconds
+788955666 nanoseconds
+
+100000000: 
+328947709 nanoseconds
+213599583 nanoseconds
+
+130000000: 
+427137209 nanoseconds
+277556500 nanoseconds
+
+160000000: 
+525800834 nanoseconds
+341009292 nanoseconds
+
+190000000: 
+625226708 nanoseconds
+405808083 nanoseconds
+
+220000000: 
+725327334 nanoseconds
+471459959 nanoseconds
+
+250000000: 
+822723333 nanoseconds
+534039500 nanoseconds
+
+280000000: 
+921290625 nanoseconds
+597785833 nanoseconds
+
+310000000: 
+1018988792 nanoseconds
+679037875 nanoseconds
+
+340000000: 
+1118898417 nanoseconds
+725437291 nanoseconds
+
+370000000: 
+1213845750 nanoseconds
+789107416 nanoseconds
+
+100000000: 
+329123208 nanoseconds
+213101541 nanoseconds
+
+130000000: 
+427586042 nanoseconds
+277088125 nanoseconds
+
+160000000: 
+524025541 nanoseconds
+341623584 nanoseconds
+
+190000000: 
+623950542 nanoseconds
+405256667 nanoseconds
+
+220000000: 
+721811208 nanoseconds
+469733250 nanoseconds
+
+250000000: 
+819795583 nanoseconds
+534689417 nanoseconds
+
+280000000: 
+919410417 nanoseconds
+598049042 nanoseconds
+
+310000000: 
+1012830250 nanoseconds
+662477291 nanoseconds
+
+340000000: 
+1112083000 nanoseconds
+752014750 nanoseconds
+
+370000000: 
+1211698791 nanoseconds
+818294167 nanoseconds
+
+100000000: 
+330394542 nanoseconds
+214353334 nanoseconds
+
+130000000: 
+426857084 nanoseconds
+276791167 nanoseconds
+
+160000000: 
+525178791 nanoseconds
+340538750 nanoseconds
+
+190000000: 
+624184958 nanoseconds
+406086792 nanoseconds
+
+220000000: 
+722237125 nanoseconds
+468802417 nanoseconds
+
+250000000: 
+828183834 nanoseconds
+532706750 nanoseconds
+
+280000000: 
+925182167 nanoseconds
+597461791 nanoseconds
+
+310000000: 
+1013968250 nanoseconds
+660964750 nanoseconds
+
+340000000: 
+1116715750 nanoseconds
+725075083 nanoseconds
+
+370000000: 
+1209234958 nanoseconds
+788809958 nanoseconds
+
+100000000: 
+328331458 nanoseconds
+212863083 nanoseconds
+
+130000000: 
+424971833 nanoseconds
+276505916 nanoseconds
+
+160000000: 
+520973833 nanoseconds
+340339292 nanoseconds
+
+190000000: 
+624468291 nanoseconds
+404863417 nanoseconds
+
+220000000: 
+722639208 nanoseconds
+469385583 nanoseconds
+
+250000000: 
+820283625 nanoseconds
+532887167 nanoseconds
+
+280000000: 
+911509375 nanoseconds
+597019667 nanoseconds
+
+310000000: 
+1016372917 nanoseconds
+721677417 nanoseconds
+
+340000000: 
+1113211542 nanoseconds
+725456083 nanoseconds
+
+370000000: 
+1206128834 nanoseconds
+788610541 nanoseconds
+
+100000000: 
+327827708 nanoseconds
+212742167 nanoseconds
+
+130000000: 
+424880125 nanoseconds
+276480542 nanoseconds
+
+160000000: 
+520232375 nanoseconds
+340142500 nanoseconds
+
+190000000: 
+617137584 nanoseconds
+40
