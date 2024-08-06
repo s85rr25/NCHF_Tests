@@ -98,7 +98,7 @@ public class HashTableTest {
     void collisionResistanceDistributionFile(String dataset, int[] distribution){
         FileWriter myWriter;
         try {
-            myWriter = new FileWriter("distributionOf" + dataset + ".txt");
+            myWriter = new FileWriter("unprocessedData/distributionOf" + dataset + ".txt");
             for (int i: distribution) {
                 myWriter.write("" + i + "\n");
             }
@@ -278,7 +278,7 @@ public class HashTableTest {
         };
         for (String dataset: datasets) {
             int[] count = new int[10];
-            try (Scanner scanner = new Scanner(new File("distributionOf" + dataset + ".txt"))) {
+            try (Scanner scanner = new Scanner(new File("unprocessedData/distributionOf" + dataset + ".txt"))) {
                 while (scanner.hasNextLine()) {
                     String num = scanner.nextLine();
                     count[Integer.parseInt(num)]++;
