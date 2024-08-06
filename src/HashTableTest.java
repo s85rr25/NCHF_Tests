@@ -1,11 +1,10 @@
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestFactory;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.Stack;
 import java.util.stream.Collectors;
 
@@ -44,7 +43,9 @@ public class HashTableTest {
             englishWords = new Stack<>();
             String line;
             while ((line = reader.readLine()) != null) {
-                englishWords.push(line);
+                if (!englishWords.contains(line)){
+                    englishWords.push(line);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,7 +59,9 @@ public class HashTableTest {
             passwords = new Stack<>();
             String line;
             while ((line = reader.readLine()) != null) {
-                passwords.push(line);
+                if (!passwords.contains(line)){
+                    passwords.push(line);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -72,7 +75,9 @@ public class HashTableTest {
             news = new Stack<>();
             String line;
             while ((line = reader.readLine()) != null) {
-                news.push(line);
+                if(!news.contains(line)){
+                    news.push(line);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -97,6 +102,9 @@ public class HashTableTest {
             for (int i: distribution) {
                 myWriter.write("" + i + "\n");
             }
+            for (int i = 0; i < 100; i++){
+                myWriter.write("\n");
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -110,7 +118,7 @@ public class HashTableTest {
             fnvHashTable.add(englishWords.pop());
         }
         printFNVCollisions();
-        collisionResistanceDistributionFile("Dictionary", fnvHashTable.getDistribution());
+        collisionResistanceDistributionFile("DictionaryFNV", fnvHashTable.getDistribution());
 
         resetDictionary();
         System.out.println("MurmurHash3: ");
@@ -118,7 +126,7 @@ public class HashTableTest {
             murmurHashTable.add(englishWords.pop());
         }
         printMurmurCollisions();
-        collisionResistanceDistributionFile("Dictionary", murmurHashTable.getDistribution());
+        collisionResistanceDistributionFile("DictionaryMurmur", murmurHashTable.getDistribution());
     }
 
     @Test
@@ -129,7 +137,7 @@ public class HashTableTest {
             fnvHashTable.add(passwords.pop());
         }
         printFNVCollisions();
-        collisionResistanceDistributionFile("Passwords", fnvHashTable.getDistribution());
+        collisionResistanceDistributionFile("PasswordsFNV", fnvHashTable.getDistribution());
 
         resetPasswords();
         System.out.println("MurmurHash3: ");
@@ -137,7 +145,7 @@ public class HashTableTest {
             murmurHashTable.add(passwords.pop());
         }
         printMurmurCollisions();
-        collisionResistanceDistributionFile("Passwords", murmurHashTable.getDistribution());
+        collisionResistanceDistributionFile("PasswordsMurmur", murmurHashTable.getDistribution());
     }
 
     @Test
@@ -148,7 +156,7 @@ public class HashTableTest {
             fnvHashTable.add(news.pop());
         }
         printFNVCollisions();
-        collisionResistanceDistributionFile("BBCNews", fnvHashTable.getDistribution());
+        collisionResistanceDistributionFile("BBCNewsFNV", fnvHashTable.getDistribution());
 
         resetNews();
         System.out.println("MurmurHash3: ");
@@ -156,7 +164,7 @@ public class HashTableTest {
             murmurHashTable.add(news.pop());
         }
         printMurmurCollisions();
-        collisionResistanceDistributionFile("BBCNews", murmurHashTable.getDistribution());
+        collisionResistanceDistributionFile("BBCNewsMurmur", murmurHashTable.getDistribution());
     }
 
     @Test
@@ -258,6 +266,29 @@ public class HashTableTest {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    @Test
+    void countDistributions(){
+        String[] datasets = {
+                "DictionaryFNV", "DictionaryMurmur",
+                "PasswordsFNV", "PasswordsMurmur",
+                "BBCNewsFNV", "BBCNewsMurmur"
+        };
+        for (String dataset: datasets) {
+            int[] count = new int[10];
+            try (Scanner scanner = new Scanner(new File("distributionOf" + dataset + ".txt"))) {
+                while (scanner.hasNextLine()) {
+                    String num = scanner.nextLine();
+                    count[Integer.parseInt(num)]++;
+                }
+                System.out.println(dataset + ":");
+                System.out.println(Arrays.toString(count));
+            } catch (FileNotFoundException e) {
+                System.out.println("File not found: ");
+                e.printStackTrace();
+            }
         }
     }
 

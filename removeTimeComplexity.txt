@@ -197,19 +197,3 @@
 370000000: 
 1206128834 nanoseconds
 788610541 nanoseconds
-
-100000000: 
-327827708 nanoseconds
-212742167 nanoseconds
-
-130000000: 
-424880125 nanoseconds
-276480542 nanoseconds
-
-160000000: 
-520232375 nanoseconds
-340142500 nanoseconds
-
-190000000: 
-617137584 nanoseconds
-40
